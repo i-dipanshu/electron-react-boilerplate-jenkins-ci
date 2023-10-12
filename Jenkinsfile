@@ -3,7 +3,7 @@ pipeline {
     agent any
 
     environment {
-        GITHUB_TOKEN = credentials('GITHUB_TOKEN')
+        GITHUB_TOKEN = credentials('github-pta')
         REPOSITORY_URL = 'https://github.com/i-dipanshu/electron-react-boilerplate-jenkins-ci.git'
     }
 
