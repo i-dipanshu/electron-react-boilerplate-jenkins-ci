@@ -19,15 +19,15 @@ pipeline {
         // Stage 2: Install Node.js with npm
         stage('Install Node.js and NPM') {
             steps {
-                script {
-                    tools {
-                        nodejs 'NodeJS-14' 
-                    }
-                }
-
-                // nodejs(nodeJSInstallationName: 'Node 14.0.0') {
-                //     sh 'npm config ls'
+                // script {
+                //     tools {
+                //         nodejs 'NodeJS-14' 
+                //     }
                 // }
+
+                nodejs(nodeJSInstallationName: 'Node 14.0.0') {
+                    sh 'npm config ls'
+                }
             }
         }
         
