@@ -15,7 +15,7 @@ pipeline {
                 // uncomment below line if we're using direct script 
                 // git branch: 'main', url: env.REPOSITPRY_URL
             }
-        
+        }
         // Stage 2: Install Node.js with npm
         stage('Install Node.js and NPM') {
             steps {
