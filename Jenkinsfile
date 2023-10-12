@@ -25,7 +25,7 @@ pipeline {
         //     steps {
         //         // script {
         //         //     tools {
-        //         //         nodejs 'NodeJS-14' 
+        //         //         nodejs '13.0.0' 
         //         //     }
         //         // }
 
@@ -38,7 +38,7 @@ pipeline {
         // Stage 3: Install all dependencies
         stage('npm install') {
             steps {
-                sh 'npm --version'
+                sh 'npm version'
                 sh 'npm install'
             }
         }
