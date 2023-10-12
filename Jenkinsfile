@@ -3,7 +3,7 @@ pipeline {
     agent any
 
     tools {
-        NodeJs "13.0.0"
+        nodejs "13.0.0"
     }
 
     environment {
