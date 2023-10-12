@@ -2,6 +2,10 @@ pipeline {
     
     agent any
 
+    tools {
+        nodejs "13.0.0"
+    }
+
     environment {
         GITHUB_TOKEN = credentials('github-pta')
         REPOSITORY_URL = 'https://github.com/i-dipanshu/electron-react-boilerplate-jenkins-ci.git'
@@ -16,20 +20,20 @@ pipeline {
                 // git branch: 'main', url: env.REPOSITPRY_URL
             }
         }
-        // Stage 2: Install Node.js with npm
-        stage('Install Node.js and NPM') {
-            steps {
-                // script {
-                //     tools {
-                //         nodejs 'NodeJS-14' 
-                //     }
-                // }
+        // // Stage 2: Install Node.js with npm
+        // stage('Install Node.js and NPM') {
+        //     steps {
+        //         // script {
+        //         //     tools {
+        //         //         nodejs 'NodeJS-14' 
+        //         //     }
+        //         // }
 
-                nodejs(nodeJSInstallationName: 'Node 14.0.0') {
-                    sh 'npm config ls'
-                }
-            }
-        }
+        //         nodejs(nodeJSInstallationName: 'Node 14.0.0') {
+        //             sh 'npm config ls'
+        //         }
+        //     }
+        // }
         
         // Stage 3: Install all dependencies
         stage('npm install') {
