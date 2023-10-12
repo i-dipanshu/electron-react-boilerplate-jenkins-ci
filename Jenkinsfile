@@ -9,7 +9,7 @@ pipeline {
     environment {
         GITHUB_TOKEN = credentials('github-pta')
         REPOSITORY_URL = 'https://github.com/i-dipanshu/electron-react-boilerplate-jenkins-ci.git'
-        NODE_HOME = tool name: 'Node 13.14.0', type: 'jenkins.plugins.nodejs.tools.NodeJSInstallation'
+        // NODE_HOME = tool name: 'Node 13.14.0', type: 'jenkins.plugins.nodejs.tools.NodeJSInstallation'
     }
 
     stages {
