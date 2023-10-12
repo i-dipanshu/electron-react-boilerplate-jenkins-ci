@@ -3,7 +3,7 @@ pipeline {
     agent any
 
     tools {
-        nodejs "13.0.0"
+        nodejs "13.14.0"
     }
 
     environment {
@@ -28,10 +28,6 @@ pipeline {
         //         //         nodejs '13.0.0' 
         //         //     }
         //         // }
-
-        //         nodejs(nodeJSInstallationName: 'Node 14.0.0') {
-        //             sh 'npm config ls'
-        //         }
         //     }
         // }
         
