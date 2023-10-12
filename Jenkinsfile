@@ -47,9 +47,9 @@ pipeline {
         stage('npm install') {
             steps {
                 sh 'npm version'
-                sh 'npm install'
-                sh 'npm cache verify'
                 sh 'npm cache clean'
+                sh 'npm cache verify'
+                sh 'npm install'
             }
         }
         
